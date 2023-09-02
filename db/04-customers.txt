@@ -1,0 +1,164 @@
+You are now connected to database "nc_flix" as user "davidluke".
+
+ 1. Here is the information about the customers and their loyalty status:
+ customer_name |  location  |  membership_status   
+---------------+------------+----------------------
+ David         | Leeds      | gold status
+ Joe           | Liverpool  | silver status
+ Verity        | Leicester  | doesn't even go here
+ Cat           | Manchester | silver status
+ Alex          | Manchester | gold status
+ Duncan        | Manchester | silver status
+ Vel           | Leeds      | silver status
+ Liam          | Leeds      | doesn't even go here
+ Jim           | Leeds      | silver status
+ Paul C        | Bolton     | gold status
+ Haz           | Bolton     | doesn't even go here
+(11 rows)
+
+
+ 2. Here is a comprehensive output of the customers ordered by loyalty points, and grouped by area:
+ customer_name |  location  | loyalty_points | age | rank 
+---------------+------------+----------------+-----+------
+ Paul C        | Bolton     |            198 |  32 |    1
+ Haz           | Bolton     |              0 |  31 |    2
+ David         | Leeds      |            202 |  30 |    1
+ Jim           | Leeds      |             14 |  34 |    2
+ Vel           | Leeds      |             14 |  34 |    2
+ Liam          | Leeds      |              0 |  29 |    4
+ Verity        | Leicester  |              0 |  26 |    1
+ Joe           | Liverpool  |             13 |  34 |    1
+ Alex          | Manchester |           1045 |  22 |    1
+ Duncan        | Manchester |             99 |  29 |    2
+ Cat           | Manchester |             29 |  37 |    3
+(11 rows)
+
+ customer_name |  location  | loyalty_points | age 
+---------------+------------+----------------+-----
+ Paul C        | Bolton     |            198 |  32
+ Haz           | Bolton     |              0 |  31
+ David         | Leeds      |            202 |  30
+ Jim           | Leeds      |             14 |  34
+ Vel           | Leeds      |             14 |  34
+ Liam          | Leeds      |              0 |  29
+ Verity        | Leicester  |              0 |  26
+ Joe           | Liverpool  |             13 |  34
+ Alex          | Manchester |           1045 |  22
+ Duncan        | Manchester |             99 |  29
+ Cat           | Manchester |             29 |  37
+(11 rows)
+
+
+ Just me messing around, joining all the data
+
+ genre_id | movie_id | store_id | stock_id |    city    |               title                | release_date | rating | cost | classification | is_sequel | movie_genre_id | genre_name |                          description                           
+----------+----------+----------+----------+------------+------------------------------------+--------------+--------+------+----------------+-----------+----------------+------------+----------------------------------------------------------------
+        1 |        5 |        3 |       26 | Newcastle  | The Care Bears Movie               | 1985-08-14   |     10 | 0.95 |                | f         |              8 | family     | Fun for everyone!
+        4 |        7 |        1 |        5 | Leeds      | Highlander                         | 1986-08-29   |      3 | 0.95 | 15             | f         |             11 | fantasy    | There be elves and witches
+        5 |        7 |        1 |        5 | Leeds      | Highlander                         | 1986-08-29   |      3 | 0.95 | 15             | f         |             12 | action     | Shooty shooty, punchy punchy
+        4 |        7 |        1 |        6 | Leeds      | Highlander                         | 1986-08-29   |      3 | 0.95 | 15             | f         |             11 | fantasy    | There be elves and witches
+        5 |        7 |        1 |        6 | Leeds      | Highlander                         | 1986-08-29   |      3 | 0.95 | 15             | f         |             12 | action     | Shooty shooty, punchy punchy
+        4 |        7 |        1 |        4 | Leeds      | Highlander                         | 1986-08-29   |      3 | 0.95 | 15             | f         |             11 | fantasy    | There be elves and witches
+        5 |        7 |        1 |        4 | Leeds      | Highlander                         | 1986-08-29   |      3 | 0.95 | 15             | f         |             12 | action     | Shooty shooty, punchy punchy
+        2 |        9 |        2 |       17 | Manchester | Catch Me If You Can                | 2003-01-27   |      7 | 1.90 | 15             | f         |             15 | comedy     | A giggle a minute
+        6 |        9 |        2 |       17 | Manchester | Catch Me If You Can                | 2003-01-27   |      7 | 1.90 | 15             | f         |             16 | drama      | Plot driven story time
+        7 |        9 |        2 |       17 | Manchester | Catch Me If You Can                | 2003-01-27   |      7 | 1.90 | 15             | f         |             17 | crime      | Watch out, there's gangsters about
+        2 |        9 |        2 |       18 | Manchester | Catch Me If You Can                | 2003-01-27   |      7 | 1.90 | 15             | f         |             15 | comedy     | A giggle a minute
+        6 |        9 |        2 |       18 | Manchester | Catch Me If You Can                | 2003-01-27   |      7 | 1.90 | 15             | f         |             16 | drama      | Plot driven story time
+        7 |        9 |        2 |       18 | Manchester | Catch Me If You Can                | 2003-01-27   |      7 | 1.90 | 15             | f         |             17 | crime      | Watch out, there's gangsters about
+        2 |        9 |        2 |       16 | Manchester | Catch Me If You Can                | 2003-01-27   |      7 | 1.90 | 15             | f         |             15 | comedy     | A giggle a minute
+        6 |        9 |        2 |       16 | Manchester | Catch Me If You Can                | 2003-01-27   |      7 | 1.90 | 15             | f         |             16 | drama      | Plot driven story time
+        7 |        9 |        2 |       16 | Manchester | Catch Me If You Can                | 2003-01-27   |      7 | 1.90 | 15             | f         |             17 | crime      | Watch out, there's gangsters about
+        2 |        9 |        2 |       19 | Manchester | Catch Me If You Can                | 2003-01-27   |      7 | 1.90 | 15             | f         |             15 | comedy     | A giggle a minute
+        6 |        9 |        2 |       19 | Manchester | Catch Me If You Can                | 2003-01-27   |      7 | 1.90 | 15             | f         |             16 | drama      | Plot driven story time
+        7 |        9 |        2 |       19 | Manchester | Catch Me If You Can                | 2003-01-27   |      7 | 1.90 | 15             | f         |             17 | crime      | Watch out, there's gangsters about
+        6 |       10 |        2 |       21 | Manchester | Taxi Driver                        | 1976-08-19   |        | 0.95 | 15             | f         |             18 | drama      | Plot driven story time
+        7 |       10 |        2 |       21 | Manchester | Taxi Driver                        | 1976-08-19   |        | 0.95 | 15             | f         |             19 | crime      | Watch out, there's gangsters about
+        6 |       10 |        2 |       20 | Manchester | Taxi Driver                        | 1976-08-19   |        | 0.95 | 15             | f         |             18 | drama      | Plot driven story time
+        7 |       10 |        2 |       20 | Manchester | Taxi Driver                        | 1976-08-19   |        | 0.95 | 15             | f         |             19 | crime      | Watch out, there's gangsters about
+        6 |       12 |        3 |       22 | Newcastle  | Girl, Interrupted                  | 2000-03-24   |      8 | 1.90 | 12             | f         |             22 | drama      | Plot driven story time
+        5 |       14 |        4 |       31 | Birmingham | Episode I - The Phantom Menace     | 1999-05-19   |      7 | 1.43 |                | f         |             25 | action     | Shooty shooty, punchy punchy
+        8 |       14 |        4 |       31 | Birmingham | Episode I - The Phantom Menace     | 1999-05-19   |      7 | 1.43 |                | f         |             26 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        5 |       14 |        4 |       30 | Birmingham | Episode I - The Phantom Menace     | 1999-05-19   |      7 | 1.43 |                | f         |             25 | action     | Shooty shooty, punchy punchy
+        8 |       14 |        4 |       30 | Birmingham | Episode I - The Phantom Menace     | 1999-05-19   |      7 | 1.43 |                | f         |             26 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        5 |       14 |        4 |       29 | Birmingham | Episode I - The Phantom Menace     | 1999-05-19   |      7 | 1.43 |                | f         |             25 | action     | Shooty shooty, punchy punchy
+        8 |       14 |        4 |       29 | Birmingham | Episode I - The Phantom Menace     | 1999-05-19   |      7 | 1.43 |                | f         |             26 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        5 |       14 |        4 |       28 | Birmingham | Episode I - The Phantom Menace     | 1999-05-19   |      7 | 1.43 |                | f         |             25 | action     | Shooty shooty, punchy punchy
+        8 |       14 |        4 |       28 | Birmingham | Episode I - The Phantom Menace     | 1999-05-19   |      7 | 1.43 |                | f         |             26 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        5 |       14 |        4 |       32 | Birmingham | Episode I - The Phantom Menace     | 1999-05-19   |      7 | 1.43 |                | f         |             25 | action     | Shooty shooty, punchy punchy
+        8 |       14 |        4 |       32 | Birmingham | Episode I - The Phantom Menace     | 1999-05-19   |      7 | 1.43 |                | f         |             26 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        5 |       14 |        4 |       27 | Birmingham | Episode I - The Phantom Menace     | 1999-05-19   |      7 | 1.43 |                | f         |             25 | action     | Shooty shooty, punchy punchy
+        8 |       14 |        4 |       27 | Birmingham | Episode I - The Phantom Menace     | 1999-05-19   |      7 | 1.43 |                | f         |             26 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        5 |       15 |        4 |       34 | Birmingham | Episode IV - A New Hope            | 1977-05-25   |     10 | 2.14 | 12             | t         |             27 | action     | Shooty shooty, punchy punchy
+        8 |       15 |        4 |       34 | Birmingham | Episode IV - A New Hope            | 1977-05-25   |     10 | 2.14 | 12             | t         |             28 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        5 |       15 |        1 |        8 | Leeds      | Episode IV - A New Hope            | 1977-05-25   |     10 | 2.14 | 12             | t         |             27 | action     | Shooty shooty, punchy punchy
+        8 |       15 |        1 |        8 | Leeds      | Episode IV - A New Hope            | 1977-05-25   |     10 | 2.14 | 12             | t         |             28 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        5 |       15 |        1 |        7 | Leeds      | Episode IV - A New Hope            | 1977-05-25   |     10 | 2.14 | 12             | t         |             27 | action     | Shooty shooty, punchy punchy
+        8 |       15 |        1 |        7 | Leeds      | Episode IV - A New Hope            | 1977-05-25   |     10 | 2.14 | 12             | t         |             28 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        5 |       15 |        4 |       33 | Birmingham | Episode IV - A New Hope            | 1977-05-25   |     10 | 2.14 | 12             | t         |             27 | action     | Shooty shooty, punchy punchy
+        8 |       15 |        4 |       33 | Birmingham | Episode IV - A New Hope            | 1977-05-25   |     10 | 2.14 | 12             | t         |             28 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        5 |       16 |        4 |       35 | Birmingham | Episode IX - The Rise of Skywalker | 2019-12-20   |      3 | 1.19 | 15             | t         |             29 | action     | Shooty shooty, punchy punchy
+        8 |       16 |        4 |       35 | Birmingham | Episode IX - The Rise of Skywalker | 2019-12-20   |      3 | 1.19 | 15             | t         |             30 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        5 |       16 |        1 |        9 | Leeds      | Episode IX - The Rise of Skywalker | 2019-12-20   |      3 | 1.19 | 15             | t         |             29 | action     | Shooty shooty, punchy punchy
+        8 |       16 |        1 |        9 | Leeds      | Episode IX - The Rise of Skywalker | 2019-12-20   |      3 | 1.19 | 15             | t         |             30 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        5 |       16 |        1 |       10 | Leeds      | Episode IX - The Rise of Skywalker | 2019-12-20   |      3 | 1.19 | 15             | t         |             29 | action     | Shooty shooty, punchy punchy
+        8 |       16 |        1 |       10 | Leeds      | Episode IX - The Rise of Skywalker | 2019-12-20   |      3 | 1.19 | 15             | t         |             30 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        2 |       17 |        2 |       13 | Manchester | Back to the Future                 | 1985-07-03   |     10 | 2.38 | U              | f         |             31 | comedy     | A giggle a minute
+        8 |       17 |        2 |       13 | Manchester | Back to the Future                 | 1985-07-03   |     10 | 2.38 | U              | f         |             32 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        2 |       17 |        2 |       12 | Manchester | Back to the Future                 | 1985-07-03   |     10 | 2.38 | U              | f         |             31 | comedy     | A giggle a minute
+        8 |       17 |        2 |       12 | Manchester | Back to the Future                 | 1985-07-03   |     10 | 2.38 | U              | f         |             32 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        2 |       18 |        2 |       14 | Manchester | Back to the Future Part II         | 1989-11-22   |        | 1.66 | U              | t         |             33 | comedy     | A giggle a minute
+        8 |       18 |        2 |       14 | Manchester | Back to the Future Part II         | 1989-11-22   |        | 1.66 | U              | t         |             34 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        2 |       18 |        2 |       15 | Manchester | Back to the Future Part II         | 1989-11-22   |        | 1.66 | U              | t         |             33 | comedy     | A giggle a minute
+        8 |       18 |        2 |       15 | Manchester | Back to the Future Part II         | 1989-11-22   |        | 1.66 | U              | t         |             34 | sci_fi     | Your scientists were so preoccupied with whether they could...
+        7 |       21 |        3 |       25 | Newcastle  | Pulp Fiction                       | 1994-05-21   |      5 | 1.90 |                | f         |             39 | crime      | Watch out, there's gangsters about
+        7 |       21 |        3 |       24 | Newcastle  | Pulp Fiction                       | 1994-05-21   |      5 | 1.90 |                | f         |             39 | crime      | Watch out, there's gangsters about
+        7 |       21 |        3 |       23 | Newcastle  | Pulp Fiction                       | 1994-05-21   |      5 | 1.90 |                | f         |             39 | crime      | Watch out, there's gangsters about
+        7 |       21 |        1 |        3 | Leeds      | Pulp Fiction                       | 1994-05-21   |      5 | 1.90 |                | f         |             39 | crime      | Watch out, there's gangsters about
+        1 |       22 |        1 |        1 | Leeds      | Toy Story                          | 1995-11-19   |     10 | 1.43 | U              | f         |             40 | family     | Fun for everyone!
+        1 |       22 |        1 |        2 | Leeds      | Toy Story                          | 1995-11-19   |     10 | 1.43 | U              | f         |             40 | family     | Fun for everyone!
+        1 |       22 |        2 |       11 | Manchester | Toy Story                          | 1995-11-19   |     10 | 1.43 | U              | f         |             40 | family     | Fun for everyone!
+(65 rows)
+
+
+ Just me messing around, joining all the data, but accounting for the different genres
+
+ stock_id | movie_id | release_date | store_id |    city    | rating |               title                |       genres       | release_date | is_sequel | cost 
+----------+----------+--------------+----------+------------+--------+------------------------------------+--------------------+--------------+-----------+------
+        1 |       22 | 1995-11-19   |        1 | Leeds      |     10 | Toy Story                          | family             | 1995-11-19   | f         | 1.43
+        2 |       22 | 1995-11-19   |        1 | Leeds      |     10 | Toy Story                          | family             | 1995-11-19   | f         | 1.43
+        3 |       21 | 1994-05-21   |        1 | Leeds      |      5 | Pulp Fiction                       | crime              | 1994-05-21   | f         | 1.90
+        4 |        7 | 1986-08-29   |        1 | Leeds      |      3 | Highlander                         | action,fantasy     | 1986-08-29   | f         | 0.95
+        5 |        7 | 1986-08-29   |        1 | Leeds      |      3 | Highlander                         | action,fantasy     | 1986-08-29   | f         | 0.95
+        6 |        7 | 1986-08-29   |        1 | Leeds      |      3 | Highlander                         | action,fantasy     | 1986-08-29   | f         | 0.95
+        7 |       15 | 1977-05-25   |        1 | Leeds      |     10 | Episode IV - A New Hope            | sci_fi,action      | 1977-05-25   | t         | 2.14
+        8 |       15 | 1977-05-25   |        1 | Leeds      |     10 | Episode IV - A New Hope            | sci_fi,action      | 1977-05-25   | t         | 2.14
+        9 |       16 | 2019-12-20   |        1 | Leeds      |      3 | Episode IX - The Rise of Skywalker | sci_fi,action      | 2019-12-20   | t         | 1.19
+       10 |       16 | 2019-12-20   |        1 | Leeds      |      3 | Episode IX - The Rise of Skywalker | sci_fi,action      | 2019-12-20   | t         | 1.19
+       11 |       22 | 1995-11-19   |        2 | Manchester |     10 | Toy Story                          | family             | 1995-11-19   | f         | 1.43
+       12 |       17 | 1985-07-03   |        2 | Manchester |     10 | Back to the Future                 | sci_fi,comedy      | 1985-07-03   | f         | 2.38
+       13 |       17 | 1985-07-03   |        2 | Manchester |     10 | Back to the Future                 | sci_fi,comedy      | 1985-07-03   | f         | 2.38
+       14 |       18 | 1989-11-22   |        2 | Manchester |        | Back to the Future Part II         | sci_fi,comedy      | 1989-11-22   | t         | 1.66
+       15 |       18 | 1989-11-22   |        2 | Manchester |        | Back to the Future Part II         | sci_fi,comedy      | 1989-11-22   | t         | 1.66
+       16 |        9 | 2003-01-27   |        2 | Manchester |      7 | Catch Me If You Can                | crime,drama,comedy | 2003-01-27   | f         | 1.90
+       17 |        9 | 2003-01-27   |        2 | Manchester |      7 | Catch Me If You Can                | crime,drama,comedy | 2003-01-27   | f         | 1.90
+       18 |        9 | 2003-01-27   |        2 | Manchester |      7 | Catch Me If You Can                | crime,drama,comedy | 2003-01-27   | f         | 1.90
+       19 |        9 | 2003-01-27   |        2 | Manchester |      7 | Catch Me If You Can                | crime,drama,comedy | 2003-01-27   | f         | 1.90
+       20 |       10 | 1976-08-19   |        2 | Manchester |        | Taxi Driver                        | crime,drama        | 1976-08-19   | f         | 0.95
+       21 |       10 | 1976-08-19   |        2 | Manchester |        | Taxi Driver                        | crime,drama        | 1976-08-19   | f         | 0.95
+       22 |       12 | 2000-03-24   |        3 | Newcastle  |      8 | Girl, Interrupted                  | drama              | 2000-03-24   | f         | 1.90
+       23 |       21 | 1994-05-21   |        3 | Newcastle  |      5 | Pulp Fiction                       | crime              | 1994-05-21   | f         | 1.90
+       24 |       21 | 1994-05-21   |        3 | Newcastle  |      5 | Pulp Fiction                       | crime              | 1994-05-21   | f         | 1.90
+       25 |       21 | 1994-05-21   |        3 | Newcastle  |      5 | Pulp Fiction                       | crime              | 1994-05-21   | f         | 1.90
+       26 |        5 | 1985-08-14   |        3 | Newcastle  |     10 | The Care Bears Movie               | family             | 1985-08-14   | f         | 0.95
+       27 |       14 | 1999-05-19   |        4 | Birmingham |      7 | Episode I - The Phantom Menace     | sci_fi,action      | 1999-05-19   | f         | 1.43
+       28 |       14 | 1999-05-19   |        4 | Birmingham |      7 | Episode I - The Phantom Menace     | sci_fi,action      | 1999-05-19   | f         | 1.43
+       29 |       14 | 1999-05-19   |        4 | Birmingham |      7 | Episode I - The Phantom Menace     | sci_fi,action      | 1999-05-19   | f         | 1.43
+       30 |       14 | 1999-05-19   |        4 | Birmingham |      7 | Episode I - The Phantom Menace     | sci_fi,action      | 1999-05-19   | f         | 1.43
+       31 |       14 | 1999-05-19   |        4 | Birmingham |      7 | Episode I - The Phantom Menace     | sci_fi,action      | 1999-05-19   | f         | 1.43
+       32 |       14 | 1999-05-19   |        4 | Birmingham |      7 | Episode I - The Phantom Menace     | sci_fi,action      | 1999-05-19   | f         | 1.43
+       33 |       15 | 1977-05-25   |        4 | Birmingham |     10 | Episode IV - A New Hope            | sci_fi,action      | 1977-05-25   | t         | 2.14
+       34 |       15 | 1977-05-25   |        4 | Birmingham |     10 | Episode IV - A New Hope            | sci_fi,action      | 1977-05-25   | t         | 2.14
+       35 |       16 | 2019-12-20   |        4 | Birmingham |      3 | Episode IX - The Rise of Skywalker | sci_fi,action      | 2019-12-20   | t         | 1.19
+(35 rows)
+

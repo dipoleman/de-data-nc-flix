@@ -1,0 +1,44 @@
+You are now connected to database "nc_flix" as user "davidluke".
+
+ 1. The store with the highest total of sequels is:
+ city  | count 
+-------+-------
+ Leeds |     8
+(1 row)
+
+ALTER TABLE
+UPDATE 5
+ movie_id |               title                | release_date | rating | cost | classification | is_sequel 
+----------+------------------------------------+--------------+--------+------+----------------+-----------
+        2 | The Breakfast Club                 | 1985-06-07   |      3 | 1.90 | 12             | f
+        3 | Todo Sobre Mi Madre                | 2015-08-15   |      5 | 1.19 | 12             | f
+        5 | The Care Bears Movie               | 1985-08-14   |     10 | 0.95 |                | f
+        6 | Tron                               | 1982-10-21   |        | 1.90 | 15             | f
+        7 | Highlander                         | 1986-08-29   |      3 | 0.95 | 15             | f
+        8 | Cleopatra                          | 1963-07-31   |      6 | 0.95 | U              | f
+        9 | Catch Me If You Can                | 2003-01-27   |      7 | 1.90 | 15             | f
+       10 | Taxi Driver                        | 1976-08-19   |        | 0.95 | 15             | f
+       11 | The Princess Switch                | 2018-11-16   |        | 0.95 |                | f
+       12 | Girl, Interrupted                  | 2000-03-24   |      8 | 1.90 | 12             | f
+       13 | The Fellowship of the Ring         | 2001-12-19   |      9 | 2.38 | 12             | f
+       14 | Episode I - The Phantom Menace     | 1999-05-19   |      7 | 1.43 |                | f
+       17 | Back to the Future                 | 1985-07-03   |     10 | 2.38 | U              | f
+       19 | The Godfather                      | 1972-03-14   |     10 | 1.43 | 18             | f
+       20 | Raiders of the Lost Ark            | 1981-06-12   |      9 | 2.14 | 12             | f
+       21 | Pulp Fiction                       | 1994-05-21   |      5 | 1.90 |                | f
+       22 | Toy Story                          | 1995-11-19   |     10 | 1.43 | U              | f
+       23 | Groundhog Day                      | 1993-02-12   |      7 | 1.43 | U              | f
+       24 | A Fish Called Wanda                | 1988-07-07   |      7 | 1.43 |                | f
+       25 | Independance Day                   | 1996-07-03   |      7 | 0.95 | 15             | f
+        1 | Ghostbusters II                    | 1989-12-01   |        | 1.43 | U              | t
+        4 | The Lion King II: Simba's Pride    | 1998-10-26   |      1 | 1.43 | U              | t
+       15 | Episode IV - A New Hope            | 1977-05-25   |     10 | 2.14 | 12             | t
+       16 | Episode IX - The Rise of Skywalker | 2019-12-20   |      3 | 1.19 | 15             | t
+       18 | Back to the Future Part II         | 1989-11-22   |        | 1.66 | U              | t
+(25 rows)
+
+ city  | count 
+-------+-------
+ Leeds |     8
+(1 row)
+

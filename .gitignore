@@ -1,0 +1,6 @@
+venv/
+**/*.pyc
+**/.vscode
+**/*_cache
+**/*pycache
+Makefile

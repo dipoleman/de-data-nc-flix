@@ -1,0 +1,122 @@
+You are now connected to database "nc_flix" as user "davidluke".
+
+ 1. Here are all the movie titles which were released in the 21st century:
+ movie_id |               title                | release_date | rating | cost | classification 
+----------+------------------------------------+--------------+--------+------+----------------
+        3 | Todo Sobre Mi Madre                | 2015-08-15   |      5 | 1.25 | 12
+        9 | Catch Me If You Can                | 2003-01-27   |      7 | 2.00 | 15
+       11 | The Princess Switch                | 2018-11-16   |        | 1.00 | 
+       12 | Girl, Interrupted                  | 2000-03-24   |      8 | 2.00 | 12
+       13 | The Fellowship of the Ring         | 2001-12-19   |      9 | 2.50 | 12
+       16 | Episode IX - The Rise of Skywalker | 2019-12-20   |      3 | 1.25 | 15
+(6 rows)
+
+
+ 2. This is our oldest customer:
+ customer_id | customer_name | date_of_birth |  location  | loyalty_points 
+-------------+---------------+---------------+------------+----------------
+           1 | David         | 1992-12-30    | Leeds      |            202
+           2 | Joe           | 1989-06-21    | Liverpool  |             13
+           3 | Verity        | 1997-01-07    | Leicester  |               
+           4 | Cat           | 1985-11-02    | Manchester |             29
+           5 | Alex          | 2001-06-24    | Manchester |           1045
+           6 | Duncan        | 1994-01-19    | Manchester |             99
+           7 | Vel           | 1989-05-01    | Leeds      |             14
+           8 | Liam          | 1993-10-03    | Leeds      |               
+           9 | Jim           | 1989-05-01    | Leeds      |             14
+          10 | Paul C        | 1991-03-28    | Bolton     |            198
+          11 | Haz           | 1992-07-02    | Bolton     |               
+(11 rows)
+
+ customer_id | customer_name | date_of_birth |  location  | loyalty_points 
+-------------+---------------+---------------+------------+----------------
+           4 | Cat           | 1985-11-02    | Manchester |             29
+(1 row)
+
+
+ 3. Customers beginning with D (youngest to oldest):
+ customer_id | customer_name | date_of_birth |  location  | loyalty_points 
+-------------+---------------+---------------+------------+----------------
+           6 | Duncan        | 1994-01-19    | Manchester |             99
+           1 | David         | 1992-12-30    | Leeds      |            202
+(2 rows)
+
+
+ 4. This is the average rating of the all the movies made in the 80s:
+ movie_id |               title                | release_date | rating | cost | classification 
+----------+------------------------------------+--------------+--------+------+----------------
+        1 | Ghostbusters II                    | 1989-12-01   |        | 1.50 | U
+        2 | The Breakfast Club                 | 1985-06-07   |      3 | 2.00 | 12
+        3 | Todo Sobre Mi Madre                | 2015-08-15   |      5 | 1.25 | 12
+        4 | The Lion King II: Simba's Pride    | 1998-10-26   |      1 | 1.50 | U
+        5 | The Care Bears Movie               | 1985-08-14   |     10 | 1.00 | 
+        6 | Tron                               | 1982-10-21   |        | 2.00 | 15
+        7 | Highlander                         | 1986-08-29   |      3 | 1.00 | 15
+        8 | Cleopatra                          | 1963-07-31   |      6 | 1.00 | U
+        9 | Catch Me If You Can                | 2003-01-27   |      7 | 2.00 | 15
+       10 | Taxi Driver                        | 1976-08-19   |        | 1.00 | 15
+       11 | The Princess Switch                | 2018-11-16   |        | 1.00 | 
+       12 | Girl, Interrupted                  | 2000-03-24   |      8 | 2.00 | 12
+       13 | The Fellowship of the Ring         | 2001-12-19   |      9 | 2.50 | 12
+       14 | Episode I - The Phantom Menace     | 1999-05-19   |      7 | 1.50 | 
+       15 | Episode IV - A New Hope            | 1977-05-25   |     10 | 2.25 | 12
+       16 | Episode IX - The Rise of Skywalker | 2019-12-20   |      3 | 1.25 | 15
+       17 | Back to the Future                 | 1985-07-03   |     10 | 2.50 | U
+       18 | Back to the Future Part II         | 1989-11-22   |        | 1.75 | U
+       19 | The Godfather                      | 1972-03-14   |     10 | 1.50 | 18
+       20 | Raiders of the Lost Ark            | 1981-06-12   |      9 | 2.25 | 12
+       21 | Pulp Fiction                       | 1994-05-21   |      5 | 2.00 | 
+       22 | Toy Story                          | 1995-11-19   |     10 | 1.50 | U
+       23 | Groundhog Day                      | 1993-02-12   |      7 | 1.50 | U
+       24 | A Fish Called Wanda                | 1988-07-07   |      7 | 1.50 | 
+       25 | Independance Day                   | 1996-07-03   |      7 | 1.00 | 15
+(25 rows)
+
+ average_rating_of_80s_movies 
+------------------------------
+                         7.00
+(1 row)
+
+
+ 5. These are the locations our customers live in, along with the total, and average number of loyalty points in that area.
+  location  | total_loyalty_points | average_loyalty_points 
+------------+----------------------+------------------------
+ Leeds      |                  230 |                  57.50
+ Leicester  |                    0 |                   0.00
+ Manchester |                 1173 |                 391.00
+ Bolton     |                  198 |                  99.00
+ Liverpool  |                   13 |                  13.00
+(5 rows)
+
+
+ 6. After decreasing the price of the movie rentals, the movie table now looks like:
+UPDATE 25
+ movie_id |               title                | release_date | rating | cost | classification 
+----------+------------------------------------+--------------+--------+------+----------------
+        1 | Ghostbusters II                    | 1989-12-01   |        | 1.43 | U
+        2 | The Breakfast Club                 | 1985-06-07   |      3 | 1.90 | 12
+        3 | Todo Sobre Mi Madre                | 2015-08-15   |      5 | 1.19 | 12
+        4 | The Lion King II: Simba's Pride    | 1998-10-26   |      1 | 1.43 | U
+        5 | The Care Bears Movie               | 1985-08-14   |     10 | 0.95 | 
+        6 | Tron                               | 1982-10-21   |        | 1.90 | 15
+        7 | Highlander                         | 1986-08-29   |      3 | 0.95 | 15
+        8 | Cleopatra                          | 1963-07-31   |      6 | 0.95 | U
+        9 | Catch Me If You Can                | 2003-01-27   |      7 | 1.90 | 15
+       10 | Taxi Driver                        | 1976-08-19   |        | 0.95 | 15
+       11 | The Princess Switch                | 2018-11-16   |        | 0.95 | 
+       12 | Girl, Interrupted                  | 2000-03-24   |      8 | 1.90 | 12
+       13 | The Fellowship of the Ring         | 2001-12-19   |      9 | 2.38 | 12
+       14 | Episode I - The Phantom Menace     | 1999-05-19   |      7 | 1.43 | 
+       15 | Episode IV - A New Hope            | 1977-05-25   |     10 | 2.14 | 12
+       16 | Episode IX - The Rise of Skywalker | 2019-12-20   |      3 | 1.19 | 15
+       17 | Back to the Future                 | 1985-07-03   |     10 | 2.38 | U
+       18 | Back to the Future Part II         | 1989-11-22   |        | 1.66 | U
+       19 | The Godfather                      | 1972-03-14   |     10 | 1.43 | 18
+       20 | Raiders of the Lost Ark            | 1981-06-12   |      9 | 2.14 | 12
+       21 | Pulp Fiction                       | 1994-05-21   |      5 | 1.90 | 
+       22 | Toy Story                          | 1995-11-19   |     10 | 1.43 | U
+       23 | Groundhog Day                      | 1993-02-12   |      7 | 1.43 | U
+       24 | A Fish Called Wanda                | 1988-07-07   |      7 | 1.43 | 
+       25 | Independance Day                   | 1996-07-03   |      7 | 0.95 | 15
+(25 rows)
+
